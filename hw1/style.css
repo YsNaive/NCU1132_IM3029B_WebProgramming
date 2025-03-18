@@ -1,0 +1,98 @@
+/* 全域樣式 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f4f4f4;
+}
+
+/* 容器設定 */
+.container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+/* 容器設定 */
+.container-hor {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+/* 固定標題 (Sticky Header) */
+.header {
+    display: flex;
+    width: 100%;
+    height: 50px;
+    padding: 3px;
+    background-color: #EDEDED;
+    color: white;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;  /* 固定在畫面頂部 */
+    top: 0;
+    left: 0;
+    z-index: 1000;  /* 確保在最上層 */
+}
+
+.header-logo{
+    height: 100%;
+    margin-left: 35px;
+}
+
+/* 為了避免內容被 header 蓋住，加入一個與 header 相同高度的 margin */
+.main-container {
+    margin-top: 60px;  /* 必須與 .header 的高度匹配 */
+    width: 70%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+    overflow-y: auto;
+}
+
+/* 卡片樣式 */
+.major-info-card {
+    display: flex;
+    width: 100%;
+    height: 300px;
+    border: 1px solid #ddd;
+    background-color: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.major-info-img {
+    width: 40%;
+    background-color: #ccc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.major-info-description {
+    width: 60%;
+    padding: 20px;
+}
+
+/* 底部網站信息 */
+.footer {
+    width: 100%;
+    padding: 15px;
+    text-align: center;
+    background-color: #333;
+    color: white;
+    margin-top: 20px;
+}
